@@ -1,0 +1,42 @@
+{% extends 'index.html' %} {% block body %}
+
+<div
+  class="container d-flex justify-content-center align-items-center bg-white"
+>
+  <div class="d-flex">
+    <!-- <div class="col-xl-5 col-md-12 p-0 me-5 border"> -->
+    <canvas onclick="selectBox(event)" id="imgCanvas"></canvas>
+    <!-- </div> -->
+    <div class="p-5 mt-5" style="height: 500px; width: 600px">
+      <label for="" class="form-label">Select label:-</label>
+      <div class="d-flex">
+        <select onchange="onOptionChange(event)" class="form-select me-2">
+          <option value="invoiceNumber">Invoice Number</option>
+          <option value="sendersName">Senders Name</option>
+          <option value="sendersAddress">Senders Address</option>
+          <option value="phoneNumber">Phone Number</option>
+          <option value="recieversName">Recievers Name</option>
+          <option value="recieversAddress">Recievers Address</option>
+          <option value="invoiceDate">Invoice Date</option>
+          <option value="totalAmount">Total Amount</option>
+          <option value="phosition1">Position 1</option>
+        </select>
+      </div>
+      <div class="bg-light mt-4 p-3 text-start h-75 border">
+        <h2 class="fw-bold">Your Selections:-</h2>
+        <hr />
+        <div class="output h-75"></div>
+      </div>
+      <div class="d-flex justify-content-between mt-3">
+        <button onclick="onSave()" class="btn btn-primary" type="button">
+          Save
+        </button>
+       <!-- <button onclick="" class="btn btn-success" type="button">
+          Annonate
+        </button>-->
+      </div>
+      <p class="text-success fw-bold mt-3">Success message will be here.</p>
+    </div>
+  </div>
+</div>
+{% endblock body %}
